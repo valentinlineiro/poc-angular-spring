@@ -1,0 +1,19 @@
+{
+  "name": "vfs-frontend",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valentinlineiro/poc-angular-spring.git"
+  },
+  "author": "Valentín Liñeiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/valentinlineiro/poc-angular-spring/issues"
+  },
+  "homepage": "https://github.com/valentinlineiro/poc-angular-spring#readme"
+}

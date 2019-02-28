@@ -5,7 +5,7 @@
 export const environment = {
   app: {
     name: 'Vincle for Sales',
-    version: '2.0.0-alpha'
+    version: '2.0.0-dev'
   },
   production: false
 };

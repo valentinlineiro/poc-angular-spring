@@ -9,7 +9,7 @@ services:
       - "8082:8082"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://cloud-config-server:8082/actuator/health"]
-      interval: 5s
+      interval: 10s
       retries: 20
 
   cloud-gateway:
@@ -27,7 +27,7 @@ services:
         condition: service_healthy
     healthcheck:
       test: ["CMD", "curl", "-f", "http://cloud-gateway:8080/actuator/health"]
-      interval: 5s
+      interval: 10s
       retries: 20
 
   cloud-eureka-server:
@@ -44,7 +44,7 @@ services:
         condition: service_healthy
     healthcheck:
       test: ["CMD", "curl", "-f", "http://cloud-eureka-server:8081/actuator/health"]
-      interval: 5s
+      interval: 10s
       retries: 20
 
   cloud-hystrix-dashboard:
@@ -62,7 +62,7 @@ services:
         condition: service_healthy
     healthcheck:
       test: ["CMD", "curl", "-f", "http://cloud-hystrix-dashboard:8083/actuator/health"]
-      interval: 5s
+      interval: 10s
       retries: 20
 
   core:
@@ -80,6 +80,6 @@ services:
         condition: service_healthy
     healthcheck:
       test: ["CMD", "curl", "-f", "http://core:8084/actuator/health"]
-      interval: 5s
+      interval: 10s
       retries: 20
 

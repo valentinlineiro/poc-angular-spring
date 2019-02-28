@@ -1,4 +1,9 @@
 /target/
+/cloud-config-server/target/
+/cloud-eureka-server/target/
+/cloud-gateway/target/
+/cloud-hystrix-dashboard/target/
+/core/target/
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###

@@ -4,7 +4,7 @@
 
 export const environment = {
   app: {
-    name: 'Vincle for Sales',
+    name: 'Angular and Spring PoC',
     version: '2.0.0-dev'
   },
   production: false

@@ -1,4 +1,4 @@
-package com.vincle.vfs.user;
+package com.vincle.vfs.customer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

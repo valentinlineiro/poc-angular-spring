@@ -1,0 +1,23 @@
+<div fxFlex fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row wrap">
+    <div *ngFor="let customer of customers" fxFlex="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column"
+      style="padding: 5px;">
+      <mat-card>
+        <div mat-card-header>
+          <mat-card-title>{{customer.name}}</mat-card-title>
+          <mat-card-subtitle>{{customer.code}}</mat-card-subtitle>
+        </div>
+        <mat-card-content>
+          <p class="mat-body">This could show customer info.</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" [routerLink]="['/edit', customer.id]">EDIT</button>
+          <button mat-raised-button color="warn" (click)="confirmDelete(customer.id)">DELETE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<button mat-fab color="primary" class="bottom-right" [routerLink]="['/add']">
+  <mat-icon>add</mat-icon> 
+</button>

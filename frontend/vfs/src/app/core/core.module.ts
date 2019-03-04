@@ -1,3 +1,4 @@
+import { CustomerModule } from './../customer/customer.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShellComponent } from './shell/shell.component';
@@ -9,7 +10,8 @@ import { NavComponent } from './shell/nav/nav.component';
   declarations: [ShellComponent, SidenavComponent, NavComponent],
   imports: [
     CommonModule,
-    UiModule
+    UiModule,
+    CustomerModule
   ],
   exports: [
     ShellComponent

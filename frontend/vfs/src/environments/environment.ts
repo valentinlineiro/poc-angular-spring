@@ -4,7 +4,7 @@
 
 export const environment = {
   app: {
-    name: 'Angular and Spring PoC',
+    name: 'Angular and Spring PoC - Customer Example',
     version: '2.0.0-dev'
   },
   production: false

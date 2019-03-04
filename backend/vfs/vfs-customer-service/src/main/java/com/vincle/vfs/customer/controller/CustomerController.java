@@ -1,4 +1,4 @@
-package com.vincle.vfs.controller;
+package com.vincle.vfs.customer.controller;
 
 import java.util.Optional;
 
@@ -23,18 +23,18 @@ import com.vincle.vfs.customer.model.Customer;
 import com.vincle.vfs.customer.model.CustomerRepository;
 
 @RestController
-@RequestMapping(name = "customers", produces = "application/json")
+@RequestMapping(produces = "application/json")
 public class CustomerController {
 	
 	@Autowired
 	protected CustomerRepository customerRepository;
 
-	@GetMapping("/")
+	@GetMapping("/customers")
 	public Page<Customer> getAll(Pageable pageable) {
 		return customerRepository.findAll(pageable);
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("/customers/{id}")
 	public Customer get(@PathVariable long id) {
 		Optional<Customer> customer = customerRepository.findById(id);
 		if(!customer.isPresent())
@@ -42,12 +42,12 @@ public class CustomerController {
 		return customer.get();
 	}
 	
-	@PostMapping("/")
+	@PostMapping("/customers")
 	public Customer create(@Valid @RequestBody Customer customer) {
 		return customerRepository.save(customer);
 	}
 	
-	@PutMapping("/{id}")
+	@PutMapping("/customers/{id}")
 	public Customer update(@Valid @RequestBody Customer customer, @PathVariable long id) {
 		Optional<Customer> stored = customerRepository.findById(id);
 		if(!stored.isPresent())
@@ -56,7 +56,7 @@ public class CustomerController {
 		return customerRepository.save(customer);
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/customers/{id}")
 	public void delete(@PathVariable long id) {
 		customerRepository.deleteById(id);
 	}
